@@ -94,3 +94,10 @@ ul#out li{
   border-radius: 0px 0px 180px 0px;
   background-color: darkgray;
 }
+.circulo {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: rgb(17, 18, 19);
+	margin: 50px;
+	}
