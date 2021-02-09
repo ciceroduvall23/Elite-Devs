@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Ligue-4</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
 
   <body>
@@ -18,7 +19,20 @@
       <h1 id="header_text">Ligue-4</h1>
       <div id="button_container">
         <button class="buttons" id="button_reset">RESET</button>
-        <button class="buttons" id="button_regras">REGRAS</button>
+        <a class="buttons" id="button_regras" href="#popup1"> REGRAS </a>
+      </div>
+      <div id="popup1" class="overlay">
+        <div class="popup">
+          <h2>Regras</h2>
+          <br />
+          <a class="close" href="#">&times;</a>
+          <div class="content">
+            O objetivo do jogo é ir colocando as fichas, até que o jogador
+            consiga colocar 4 fichas em linha (podendo ser na horizontal ou na
+            vertical ou na diagonal), e impedir que o adversário consiga o
+            mesmo.
+          </div>
+        </div>
       </div>
     </header>
 
