@@ -74,6 +74,15 @@ function stopGame() {
             }
         }
     }
+
+    // Diagonal \
+    for(let i = 0; i < matrix.length; i++) {
+        for(let j = 0; j < matrix[i].length; j++) {
+            if(j>2 && Math.abs(matrix[i][j] + matrix[i+1][j-1] + matrix[i+2][j-2] + matrix[i+3][j-3]) === 4) {
+                gameFinished('diagonal');
+            }
+        }
+    }
 }
 
 function gameFinished(direction) {
