@@ -47,34 +47,20 @@ function pushMatrix(el) {
 }
 
 function stopGame() {
+
     // Vertical
-    matrix.forEach(function(column) {
-        if(column.length === 4 && checkLastFour(column) && Math.abs(column.reduce((a,b) => a+b)) === 4) {
-            gameFinished('vertical')
-        } else if (column.length === 5 && checkLastFour(column) && Math.abs(column.reduce((a,b) => a+b)) >= 3) {
-            gameFinished('vertical')
-        } else if (column.length === 6 && checkLastFour(column) && Math.abs(column.reduce((a,b) => a+b)) >= 2) {
-            gameFinished('vertical')
+    for(let i = 0; i < matrix.length; i++) {
+        for(let j = 0; j < matrix[i].length; j++) {
+            if(Math.abs(matrix[i][j] + matrix[i][j+1] + matrix[i][j+2] + matrix[i][j+3]) === 4) {
+                gameFinished('vertical');
+            }
         }
-    });
-    
+    }
+
     // Horizontal
     // Diagonal
 }
 
-function checkLastFour(column) {
-    let nextNumber = 0;
-    let prevNumber = 0;
-    let lastFourCheck = 0;
-    for(let i = column.length-1; i > 0 ; i--) {
-        prevNumber = column[i];
-        nextNumber = column[i-1];
-        if(prevNumber != nextNumber) {
-            return false
-        } else {
-            lastFourCheck += 1
-            if (lastFourCheck === 3) {
-                return true
             }
         }
     }
