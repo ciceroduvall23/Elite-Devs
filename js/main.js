@@ -58,8 +58,13 @@ function stopGame() {
     }
 
     // Horizontal
-    // Diagonal
-}
+    for(let i = 0; i < matrix.length; i++) {
+        for(let j = 0; j < matrix[i].length; j++) {
+            if(i<4 && Math.abs(matrix[i][j] + matrix[i+1][j] + matrix[i+2][j] + matrix[i+3][j]) === 4) {
+                gameFinished('horizontal');
+            }
+        }
+    }
 
             }
         }
