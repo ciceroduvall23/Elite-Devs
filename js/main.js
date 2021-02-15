@@ -1,7 +1,12 @@
 // Elementos HTML
 let columns = document.querySelectorAll('.lis');
+let parents = document.querySelector("#ul");
+let resetBtn = document.querySelector('#button_reset');
 
-let parents=document.querySelector("#ul")
+resetBtn.addEventListener('click', function() {
+    location.reload();
+});
+
 function createEl(parentEl,nameEl,attEl,valeuEl){
     let el = document.createElement(nameEl)
     let att = document.createAttribute(attEl)
