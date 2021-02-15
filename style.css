@@ -195,6 +195,7 @@ ul#out li {
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
+  z-index: 3;
 }
 .overlay:target {
   visibility: visible;
@@ -208,7 +209,8 @@ ul#out li {
   border-radius: 5px;
   width: 30%;
   position: relative;
-  transition: all 5s ease-in-out;
+  transition: all 1s ease-in-out;
+  z-index: 4;
 }
 
 .popup h2 {
