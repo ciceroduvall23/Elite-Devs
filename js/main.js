@@ -1,3 +1,4 @@
+
 // Elementos HTML
 let columns = document.querySelectorAll('.lis');
 let parents = document.querySelector("#ul");
@@ -57,7 +58,7 @@ function stopGame() {
     for(let i = 0; i < matrix.length; i++) {
         for(let j = 0; j < matrix[i].length; j++) {
             if(Math.abs(matrix[i][j] + matrix[i][j+1] + matrix[i][j+2] + matrix[i][j+3]) === 4) {
-                gameFinished('vertical');
+                gameFinished(jogador);
             }
         }
     }
@@ -66,7 +67,7 @@ function stopGame() {
     for(let i = 0; i < matrix.length; i++) {
         for(let j = 0; j < matrix[i].length; j++) {
             if(i<4 && Math.abs(matrix[i][j] + matrix[i+1][j] + matrix[i+2][j] + matrix[i+3][j]) === 4) {
-                gameFinished('horizontal');
+                gameFinished(jogador);
             }
         }
     }
@@ -75,7 +76,7 @@ function stopGame() {
     for(let i = 0; i < matrix.length; i++) {
         for(let j = 0; j < matrix[i].length; j++) {
             if(i<4 && Math.abs(matrix[i][j] + matrix[i+1][j+1] + matrix[i+2][j+2] + matrix[i+3][j+3]) === 4) {
-                gameFinished('diagonal');
+                gameFinished(jogador);
             }
         }
     }
@@ -84,14 +85,22 @@ function stopGame() {
     for(let i = 0; i < matrix.length; i++) {
         for(let j = 0; j < matrix[i].length; j++) {
             if(i<4 && j>2 && Math.abs(matrix[i][j] + matrix[i+1][j-1] + matrix[i+2][j-2] + matrix[i+3][j-3]) === 4) {
-                gameFinished('diagonal');
+                gameFinished(jogador);
             }
         }
     }
 }
 
-function gameFinished(direction) {
-    console.log('fim ' + direction)
+function gameFinished(jogador) {
+    if(jogador == 1){
+       window.alert( 'jogador 1 venceu !' )
+       
+
+    }else if (jogador == -1){
+        window.alert( 'jogador 2 venceu !' )
+       
+
+    } 
 }
 
 function listener(tag){
