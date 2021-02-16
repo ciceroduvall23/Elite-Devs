@@ -1,45 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Ligue-4</title>
-    <div class="header">
-      <h1 id="header-text">Ligue-4</h1>
-      <div class="buttons">
-        <button id="button-reset">RESET</button>
-        <button id="button-regras">REGRAS</button>   
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Ligue-4</title>
+</head>
+
+<body>
+  <div id="mobile-alert">
+    <h2>
+      Infelizmente essa aplicação ainda não tem suporte para telas pequenas.
+    </h2>
+  </div>
+
+  <header>
+    <h1 id="header_text">Ligue-4</h1>
+    <div id="button_container">
+      <button class="buttons" id="button_reset">RESET</button>
+      <a class="buttons" id="button_regras" href="#popup1"> REGRAS </a>
+    </div>
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <h2>Regras</h2>
+        <br />
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          O objetivo do jogo é ir colocando as fichas, até que o jogador
+          consiga colocar 4 fichas em linha (podendo ser na horizontal ou na
+          vertical ou na diagonal), e impedir que o adversário consiga o
+          mesmo.
+        </div>
       </div>
     </div>
-    
-  </head>
-<body>
-         <div class="circulo"></div>
-         <div class="circulo"></div>
-        <div>
-            <div id="pipe">
+  </header>
 
-            </div>
-            <ul id="ul">
+  <div id="board">
+    <ul id="ul">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <ul id="out">
+      <li class="lis" id="1"></li>
+      <li class="lis" id="2"></li>
+      <li class="lis" id="3"></li>
+      <li class="lis" id="4"></li>
+      <li class="lis" id="5"></li>
+      <li class="lis" id="6"></li>
+      <li class="lis" id="7"></li>
+    </ul>
+  </div>
 
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <ul id="out">
-               <li class="lis"></li>
-               <li class="lis"></li>
-               <li class="lis"></li>
-               <li class="lis"></li>
-               <li class="lis"></li>
-               <li class="lis"></li>
-               <li class="lis"></li>
-            </ul>
-        </div>
+  <script src="js/mobilesupport.js"></script>
+  <script src="js/Ball.js"></script>
+  <script src="js/main.js"></script>
+</body>
 
-</html> 
+</html>
